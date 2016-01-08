@@ -48,6 +48,7 @@ static bool init_plugin(void)
   if (!init_subsystem())
     return false;
 #endif
+  debugger.resume_modes = DBG_RESMOD_STEP_INTO;
   if ( !netnode::inited() || is_miniidb() || inf.is_snapshot() )
   {
     //dosbox is always remote.
